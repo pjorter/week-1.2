@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="week_1._2.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackLayout>
+                <Label Text="Persoon" FontAttributes="Bold" FontSize="Large"></Label>
+                <Label Text="Voornaam"></Label>
+                <Entry x:Name="Voornaam"></Entry>
+                <Label Text="Achternaam"></Label>
+                <Entry x:Name="Achternaam"></Entry>
+                <Label Text="Leeftijd"></Label>
+                <Entry x:Name="Leeftijd"></Entry>
+                <!-- Entry kan vervangen worden door een Spinner of Slider -->
+                <Button Text="Toevoegen" Clicked="AddPersonClicked"></Button>
+            </StackLayout>
+            <ListView x:Name="ListViewPersonen" Grid.Column="1"
+ ItemSelected="PersonSelected">
+            </ListView>
+            <StackLayout Grid.Row="1">
+                <Label Text="Huisdier" FontAttributes="Bold" FontSize="Large"></Label>
+                <Label Text="Naam"></Label>
+                <Entry x:Name="HuisdierNaam"></Entry>
+                <Label Text="Soort"></Label>
+                <Entry x:Name="HuisdierSoort"></Entry>
+                <Button Text="Toevoegen" Clicked="AddAnimalClicked"></Button>
+            </StackLayout>
+            <ListView x:Name="ListViewHuisdieren" Grid.Row="1" Grid.Column="1">
+            </ListView>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
